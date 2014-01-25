@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07C9CC171893E29C005C7DE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9CC161893E29C005C7DE2 /* Foundation.framework */; };
+		07C9CC191893E29C005C7DE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9CC181893E29C005C7DE2 /* CoreGraphics.framework */; };
+		07C9CC1B1893E29C005C7DE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9CC1A1893E29C005C7DE2 /* UIKit.framework */; };
+		07C9CC211893E29C005C7DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC1F1893E29C005C7DE2 /* InfoPlist.strings */; };
+		07C9CC231893E29C005C7DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC221893E29C005C7DE2 /* main.m */; };
+		07C9CC271893E29C005C7DE2 /* FFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC261893E29C005C7DE2 /* FFAppDelegate.m */; };
+		07C9CC2A1893E29C005C7DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC281893E29C005C7DE2 /* Main.storyboard */; };
+		07C9CC2D1893E29C005C7DE2 /* FFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC2C1893E29C005C7DE2 /* FFViewController.m */; };
+		07C9CC2F1893E29C005C7DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC2E1893E29C005C7DE2 /* Images.xcassets */; };
+		07C9CC361893E29C005C7DE2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9CC351893E29C005C7DE2 /* XCTest.framework */; };
+		07C9CC371893E29C005C7DE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9CC161893E29C005C7DE2 /* Foundation.framework */; };
+		07C9CC381893E29C005C7DE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9CC1A1893E29C005C7DE2 /* UIKit.framework */; };
+		07C9CC401893E29C005C7DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC3E1893E29C005C7DE2 /* InfoPlist.strings */; };
+		07C9CC421893E29C005C7DE2 /* FFLicenseViewController_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC411893E29C005C7DE2 /* FFLicenseViewController_SampleTests.m */; };
+		07C9CC4E1893E321005C7DE2 /* FFLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */; };
+		07C9CC4F1893E321005C7DE2 /* FFLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */; };
+		07C9CC561893E715005C7DE2 /* FFLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC551893E715005C7DE2 /* FFLicense.m */; };
+		07C9CC571893E715005C7DE2 /* FFLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC551893E715005C7DE2 /* FFLicense.m */; };
+		07C9CC5A1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */; };
+		07C9CC5B1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */; };
+		07C9CC6018940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
+		07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
+		07C9CC6218940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
+		07C9CC6318940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07C9CC391893E29C005C7DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07C9CC0B1893E29C005C7DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C9CC121893E29C005C7DE2;
+			remoteInfo = "FFLicenseViewController Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07C9CC131893E29C005C7DE2 /* FFLicenseViewController Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFLicenseViewController Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C9CC161893E29C005C7DE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07C9CC181893E29C005C7DE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07C9CC1A1893E29C005C7DE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07C9CC1E1893E29C005C7DE2 /* FFLicenseViewController Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFLicenseViewController Sample-Info.plist"; sourceTree = "<group>"; };
+		07C9CC201893E29C005C7DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07C9CC221893E29C005C7DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07C9CC241893E29C005C7DE2 /* FFLicenseViewController Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFLicenseViewController Sample-Prefix.pch"; sourceTree = "<group>"; };
+		07C9CC251893E29C005C7DE2 /* FFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAppDelegate.h; sourceTree = "<group>"; };
+		07C9CC261893E29C005C7DE2 /* FFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAppDelegate.m; sourceTree = "<group>"; };
+		07C9CC291893E29C005C7DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07C9CC2B1893E29C005C7DE2 /* FFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFViewController.h; sourceTree = "<group>"; };
+		07C9CC2C1893E29C005C7DE2 /* FFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFViewController.m; sourceTree = "<group>"; };
+		07C9CC2E1893E29C005C7DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07C9CC341893E29C005C7DE2 /* FFLicenseViewController SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FFLicenseViewController SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C9CC351893E29C005C7DE2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07C9CC3D1893E29C005C7DE2 /* FFLicenseViewController SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFLicenseViewController SampleTests-Info.plist"; sourceTree = "<group>"; };
+		07C9CC3F1893E29C005C7DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07C9CC411893E29C005C7DE2 /* FFLicenseViewController_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFLicenseViewController_SampleTests.m; sourceTree = "<group>"; };
+		07C9CC4C1893E321005C7DE2 /* FFLicensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicensesViewController.h; sourceTree = "<group>"; };
+		07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicensesViewController.m; sourceTree = "<group>"; };
+		07C9CC541893E715005C7DE2 /* FFLicense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicense.h; sourceTree = "<group>"; };
+		07C9CC551893E715005C7DE2 /* FFLicense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicense.m; sourceTree = "<group>"; };
+		07C9CC581893EB62005C7DE2 /* FFLicenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicenceDetailViewController.h; sourceTree = "<group>"; };
+		07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicenceDetailViewController.m; sourceTree = "<group>"; };
+		07C9CC5C18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FullscreenConstraints.h"; sourceTree = "<group>"; };
+		07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FullscreenConstraints.m"; sourceTree = "<group>"; };
+		07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AnimatedArrayUpdate.h"; sourceTree = "<group>"; };
+		07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AnimatedArrayUpdate.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07C9CC101893E29C005C7DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C9CC191893E29C005C7DE2 /* CoreGraphics.framework in Frameworks */,
+				07C9CC1B1893E29C005C7DE2 /* UIKit.framework in Frameworks */,
+				07C9CC171893E29C005C7DE2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C9CC311893E29C005C7DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C9CC361893E29C005C7DE2 /* XCTest.framework in Frameworks */,
+				07C9CC381893E29C005C7DE2 /* UIKit.framework in Frameworks */,
+				07C9CC371893E29C005C7DE2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C9CC0A1893E29C005C7DE2 = {
+			isa = PBXGroup;
+			children = (
+				07C9CC4B1893E2C1005C7DE2 /* FFLicenseViewController */,
+				07C9CC1C1893E29C005C7DE2 /* FFLicenseViewController Sample */,
+				07C9CC3B1893E29C005C7DE2 /* FFLicenseViewController SampleTests */,
+				07C9CC151893E29C005C7DE2 /* Frameworks */,
+				07C9CC141893E29C005C7DE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07C9CC141893E29C005C7DE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC131893E29C005C7DE2 /* FFLicenseViewController Sample.app */,
+				07C9CC341893E29C005C7DE2 /* FFLicenseViewController SampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07C9CC151893E29C005C7DE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC161893E29C005C7DE2 /* Foundation.framework */,
+				07C9CC181893E29C005C7DE2 /* CoreGraphics.framework */,
+				07C9CC1A1893E29C005C7DE2 /* UIKit.framework */,
+				07C9CC351893E29C005C7DE2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07C9CC1C1893E29C005C7DE2 /* FFLicenseViewController Sample */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC251893E29C005C7DE2 /* FFAppDelegate.h */,
+				07C9CC261893E29C005C7DE2 /* FFAppDelegate.m */,
+				07C9CC281893E29C005C7DE2 /* Main.storyboard */,
+				07C9CC2B1893E29C005C7DE2 /* FFViewController.h */,
+				07C9CC2C1893E29C005C7DE2 /* FFViewController.m */,
+				07C9CC2E1893E29C005C7DE2 /* Images.xcassets */,
+				07C9CC1D1893E29C005C7DE2 /* Supporting Files */,
+			);
+			path = "FFLicenseViewController Sample";
+			sourceTree = "<group>";
+		};
+		07C9CC1D1893E29C005C7DE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC1E1893E29C005C7DE2 /* FFLicenseViewController Sample-Info.plist */,
+				07C9CC1F1893E29C005C7DE2 /* InfoPlist.strings */,
+				07C9CC221893E29C005C7DE2 /* main.m */,
+				07C9CC241893E29C005C7DE2 /* FFLicenseViewController Sample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07C9CC3B1893E29C005C7DE2 /* FFLicenseViewController SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC411893E29C005C7DE2 /* FFLicenseViewController_SampleTests.m */,
+				07C9CC3C1893E29C005C7DE2 /* Supporting Files */,
+			);
+			path = "FFLicenseViewController SampleTests";
+			sourceTree = "<group>";
+		};
+		07C9CC3C1893E29C005C7DE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC3D1893E29C005C7DE2 /* FFLicenseViewController SampleTests-Info.plist */,
+				07C9CC3E1893E29C005C7DE2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07C9CC4B1893E2C1005C7DE2 /* FFLicenseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC5C18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.h */,
+				07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */,
+				07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */,
+				07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */,
+				07C9CC4C1893E321005C7DE2 /* FFLicensesViewController.h */,
+				07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */,
+				07C9CC581893EB62005C7DE2 /* FFLicenceDetailViewController.h */,
+				07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */,
+				07C9CC541893E715005C7DE2 /* FFLicense.h */,
+				07C9CC551893E715005C7DE2 /* FFLicense.m */,
+			);
+			name = FFLicenseViewController;
+			path = ../FFLicenseViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07C9CC121893E29C005C7DE2 /* FFLicenseViewController Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C9CC451893E29C005C7DE2 /* Build configuration list for PBXNativeTarget "FFLicenseViewController Sample" */;
+			buildPhases = (
+				07C9CC0F1893E29C005C7DE2 /* Sources */,
+				07C9CC101893E29C005C7DE2 /* Frameworks */,
+				07C9CC111893E29C005C7DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FFLicenseViewController Sample";
+			productName = "FFLicenseViewController Sample";
+			productReference = 07C9CC131893E29C005C7DE2 /* FFLicenseViewController Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07C9CC331893E29C005C7DE2 /* FFLicenseViewController SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07C9CC481893E29C005C7DE2 /* Build configuration list for PBXNativeTarget "FFLicenseViewController SampleTests" */;
+			buildPhases = (
+				07C9CC301893E29C005C7DE2 /* Sources */,
+				07C9CC311893E29C005C7DE2 /* Frameworks */,
+				07C9CC321893E29C005C7DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07C9CC3A1893E29C005C7DE2 /* PBXTargetDependency */,
+			);
+			name = "FFLicenseViewController SampleTests";
+			productName = "FFLicenseViewController SampleTests";
+			productReference = 07C9CC341893E29C005C7DE2 /* FFLicenseViewController SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07C9CC0B1893E29C005C7DE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FF;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Florian Friedrich";
+				TargetAttributes = {
+					07C9CC331893E29C005C7DE2 = {
+						TestTargetID = 07C9CC121893E29C005C7DE2;
+					};
+				};
+			};
+			buildConfigurationList = 07C9CC0E1893E29C005C7DE2 /* Build configuration list for PBXProject "FFLicenseViewController Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07C9CC0A1893E29C005C7DE2;
+			productRefGroup = 07C9CC141893E29C005C7DE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07C9CC121893E29C005C7DE2 /* FFLicenseViewController Sample */,
+				07C9CC331893E29C005C7DE2 /* FFLicenseViewController SampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07C9CC111893E29C005C7DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C9CC2F1893E29C005C7DE2 /* Images.xcassets in Resources */,
+				07C9CC211893E29C005C7DE2 /* InfoPlist.strings in Resources */,
+				07C9CC2A1893E29C005C7DE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C9CC321893E29C005C7DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C9CC401893E29C005C7DE2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C9CC0F1893E29C005C7DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C9CC5A1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */,
+				07C9CC6018940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
+				07C9CC561893E715005C7DE2 /* FFLicense.m in Sources */,
+				07C9CC271893E29C005C7DE2 /* FFAppDelegate.m in Sources */,
+				07C9CC231893E29C005C7DE2 /* main.m in Sources */,
+				07C9CC4E1893E321005C7DE2 /* FFLicensesViewController.m in Sources */,
+				07C9CC2D1893E29C005C7DE2 /* FFViewController.m in Sources */,
+				07C9CC6218940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07C9CC301893E29C005C7DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07C9CC5B1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */,
+				07C9CC4F1893E321005C7DE2 /* FFLicensesViewController.m in Sources */,
+				07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
+				07C9CC571893E715005C7DE2 /* FFLicense.m in Sources */,
+				07C9CC421893E29C005C7DE2 /* FFLicenseViewController_SampleTests.m in Sources */,
+				07C9CC6318940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07C9CC3A1893E29C005C7DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07C9CC121893E29C005C7DE2 /* FFLicenseViewController Sample */;
+			targetProxy = 07C9CC391893E29C005C7DE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07C9CC1F1893E29C005C7DE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C9CC201893E29C005C7DE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07C9CC281893E29C005C7DE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C9CC291893E29C005C7DE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07C9CC3E1893E29C005C7DE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07C9CC3F1893E29C005C7DE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07C9CC431893E29C005C7DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07C9CC441893E29C005C7DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07C9CC461893E29C005C7DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFLicenseViewController Sample/FFLicenseViewController Sample-Prefix.pch";
+				INFOPLIST_FILE = "FFLicenseViewController Sample/FFLicenseViewController Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07C9CC471893E29C005C7DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFLicenseViewController Sample/FFLicenseViewController Sample-Prefix.pch";
+				INFOPLIST_FILE = "FFLicenseViewController Sample/FFLicenseViewController Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		07C9CC491893E29C005C7DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFLicenseViewController Sample.app/FFLicenseViewController Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFLicenseViewController Sample/FFLicenseViewController Sample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FFLicenseViewController SampleTests/FFLicenseViewController SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07C9CC4A1893E29C005C7DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFLicenseViewController Sample.app/FFLicenseViewController Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFLicenseViewController Sample/FFLicenseViewController Sample-Prefix.pch";
+				INFOPLIST_FILE = "FFLicenseViewController SampleTests/FFLicenseViewController SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07C9CC0E1893E29C005C7DE2 /* Build configuration list for PBXProject "FFLicenseViewController Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C9CC431893E29C005C7DE2 /* Debug */,
+				07C9CC441893E29C005C7DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07C9CC451893E29C005C7DE2 /* Build configuration list for PBXNativeTarget "FFLicenseViewController Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C9CC461893E29C005C7DE2 /* Debug */,
+				07C9CC471893E29C005C7DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07C9CC481893E29C005C7DE2 /* Build configuration list for PBXNativeTarget "FFLicenseViewController SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07C9CC491893E29C005C7DE2 /* Debug */,
+				07C9CC4A1893E29C005C7DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07C9CC0B1893E29C005C7DE2 /* Project object */;
+}
