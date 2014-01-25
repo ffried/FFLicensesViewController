@@ -28,6 +28,8 @@ If you already have a `UINavigationController` you can of course just create an 
 	licensesViewController.licenses = @[fullscreenConstraint, animatedTableUpdate];
 	[self.navigationController pushViewController:licensesViewController animated:YES];
 
+Also have a look at the sample project.
+
 # Some notes about the license files
 
 As of iOS 7 you can use rtf files and it will turn it into a `NSAttributedString`.
