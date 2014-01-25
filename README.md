@@ -32,9 +32,9 @@ Also have a look at the sample project.
 
 # Some notes about the license files
 
-As of iOS 7 you can use rtf files and it will turn it into a `NSAttributedString`.
-Although the FFLicense always returns a `NSAttributedString` it only has attributes on iOS 7+. On iOS 6 it'll just load a normal string and turn it into a `NSAttributedString`.
-As seen in my example you can just set different file paths depending on which system you run on. This, however, requires two versions of each license file.
+As of iOS 7 you can use rtf files and it will turn them into `NSAttributedString`.
+Although the `FFLicense` always returns `NSAttributedString` they only have attributes on iOS 7+. On iOS 6 it will just load a normal string and turn it into a `NSAttributedString` without any attributes.
+As seen in the example above (as well as the sample project) you can just set different file extensions depending on which iOS version you run on. This, however, requires two versions of each license file.
 
 # License
 
