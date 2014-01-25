@@ -31,6 +31,12 @@
 		07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
 		07C9CC6218940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
 		07C9CC6318940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
+		07C9CC6818942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6718942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt */; };
+		07C9CC6918942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6718942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt */; };
+		07C9CC6B18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6A18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf */; };
+		07C9CC6C18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6A18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf */; };
+		07C9CC6E18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */; };
+		07C9CC6F18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,9 @@
 		07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FullscreenConstraints.m"; sourceTree = "<group>"; };
 		07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AnimatedArrayUpdate.h"; sourceTree = "<group>"; };
 		07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AnimatedArrayUpdate.m"; sourceTree = "<group>"; };
+		07C9CC6718942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UITableView+AnimatedArrayUpdate_License.txt"; sourceTree = "<group>"; };
+		07C9CC6A18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "NSLayoutConstraint+FullscreenConstraints_License.rtf"; sourceTree = "<group>"; };
+		07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NSLayoutConstraint+FullscreenConstraints_License.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,9 @@
 				07C9CC281893E29C005C7DE2 /* Main.storyboard */,
 				07C9CC2B1893E29C005C7DE2 /* FFViewController.h */,
 				07C9CC2C1893E29C005C7DE2 /* FFViewController.m */,
+				07C9CC6718942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt */,
+				07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */,
+				07C9CC6A18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf */,
 				07C9CC2E1893E29C005C7DE2 /* Images.xcassets */,
 				07C9CC1D1893E29C005C7DE2 /* Supporting Files */,
 			);
@@ -268,8 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C9CC6B18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf in Resources */,
 				07C9CC2F1893E29C005C7DE2 /* Images.xcassets in Resources */,
+				07C9CC6818942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt in Resources */,
 				07C9CC211893E29C005C7DE2 /* InfoPlist.strings in Resources */,
+				07C9CC6E18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt in Resources */,
 				07C9CC2A1893E29C005C7DE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C9CC401893E29C005C7DE2 /* InfoPlist.strings in Resources */,
+				07C9CC6C18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf in Resources */,
+				07C9CC6F18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt in Resources */,
+				07C9CC6918942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +449,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FFLicenseViewController Sample/FFLicenseViewController Sample-Prefix.pch";
 				INFOPLIST_FILE = "FFLicenseViewController Sample/FFLicenseViewController Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -444,6 +463,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FFLicenseViewController Sample/FFLicenseViewController Sample-Prefix.pch";
 				INFOPLIST_FILE = "FFLicenseViewController Sample/FFLicenseViewController Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -510,6 +530,7 @@
 				07C9CC471893E29C005C7DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07C9CC481893E29C005C7DE2 /* Build configuration list for PBXNativeTarget "FFLicenseViewController SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +539,7 @@
 				07C9CC4A1893E29C005C7DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

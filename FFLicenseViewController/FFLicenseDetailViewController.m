@@ -24,17 +24,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.licenseTextView = [[UITextView alloc] init];
-    self.licenseTextView.translatesAutoresizingMaskIntoConstraints = NO;
     self.licenseTextView.editable = NO;
     self.licenseTextView.dataDetectorTypes = UIDataDetectorTypeNone;
     
     [NSLayoutConstraint setupSubview:self.licenseTextView fullscreenInSuperview:self.view];
+    
+    if (self.license) {
+        [self setContents];
+    }
 }
 
 - (void)setContents
 {
     self.title = self.license.title;
-    self.licenseTextView.text = self.license.licenseContent;
+    self.licenseTextView.attributedText = self.license.licenseContent;
 }
 
 #pragma mark - Setters

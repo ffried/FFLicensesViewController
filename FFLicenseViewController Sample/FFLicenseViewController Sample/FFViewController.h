@@ -10,4 +10,6 @@
 
 @interface FFViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *openLicensesButton;
+
 @end

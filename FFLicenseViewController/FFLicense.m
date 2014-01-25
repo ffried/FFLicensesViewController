@@ -28,11 +28,16 @@
 }
 
 #pragma mark - Properties
-- (NSString *)licenseContent
+- (NSAttributedString *)licenseContent
 {
     if (!_licenseContent) {
         __autoreleasing NSError *error = nil;
-        NSString *content = [NSString stringWithContentsOfURL:self.licenseFilePath encoding:NSUTF8StringEncoding error:&error];
+        NSAttributedString *content;
+        if ([NSAttributedString instancesRespondToSelector:@selector(initWithFileURL:options:documentAttributes:error:)]) {
+            content = [[NSAttributedString alloc] initWithFileURL:self.licenseFilePath options:nil documentAttributes:nil error:&error];
+        } else {
+            content = [[NSAttributedString alloc] initWithString:[NSString stringWithContentsOfURL:self.licenseFilePath encoding:NSUTF8StringEncoding error:&error]];
+        }
         if (error) {
             NSLog(@"FFLicense: An error occured while loading license contents from file: %@", error);
         }

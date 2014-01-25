@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSURL *licenseFilePath; // Either in bundle or elsewhere in app folder
-@property (nonatomic, strong, readonly) NSString *licenseContent;
+@property (nonatomic, strong, readonly) NSAttributedString *licenseContent; // on iOS 6 it will only be a normal string without attributes
 
 + (instancetype)licenseWithTitle:(NSString *)title filePath:(NSURL *)filePath;
 - (instancetype)initWithTitle:(NSString *)title filePath:(NSURL *)filePath;

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Licenses View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="FFLicensesViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="FFViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aL4-8C-dgp"/>
                         <viewControllerLayoutGuide type="bottom" id="JQZ-ZH-VWl"/>
@@ -15,13 +15,61 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwk-vl-kDi">
+                                <rect key="frame" x="109" y="269" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Licenses">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="siW-O3-O38" kind="push" identifier="showLicenses" id="qJ0-c7-6EH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mwk-vl-kDi" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="49A-yg-gdI"/>
+                            <constraint firstItem="mwk-vl-kDi" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dn2-5j-L1N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ien-Pc-bQ3"/>
+                    <connections>
+                        <outlet property="openLicensesButton" destination="mwk-vl-kDi" id="mFG-ph-da6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="-93"/>
+            <point key="canvasLocation" x="824" y="-88"/>
+        </scene>
+        <!--Licenses View Controller-->
+        <scene sceneID="Fiw-0b-sLi">
+            <objects>
+                <tableViewController id="siW-O3-O38" customClass="FFLicensesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OuF-ni-0MR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vac-49-9yf">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vac-49-9yf" id="GWu-A8-DJa">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="siW-O3-O38" id="kGR-rv-YBU"/>
+                            <outlet property="delegate" destination="siW-O3-O38" id="tHm-fc-f8Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MeA-41-4Hk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6F-Sn-7GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="-88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cNv-bF-mgy">
@@ -39,7 +87,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOf-q2-rKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="-93"/>
+            <point key="canvasLocation" x="393" y="-88"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
