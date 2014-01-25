@@ -25,8 +25,8 @@
 		07C9CC4F1893E321005C7DE2 /* FFLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */; };
 		07C9CC561893E715005C7DE2 /* FFLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC551893E715005C7DE2 /* FFLicense.m */; };
 		07C9CC571893E715005C7DE2 /* FFLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC551893E715005C7DE2 /* FFLicense.m */; };
-		07C9CC5A1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */; };
-		07C9CC5B1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */; };
+		07C9CC5A1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */; };
+		07C9CC5B1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */; };
 		07C9CC6018940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
 		07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
 		07C9CC6218940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
@@ -67,8 +67,8 @@
 		07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicensesViewController.m; sourceTree = "<group>"; };
 		07C9CC541893E715005C7DE2 /* FFLicense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicense.h; sourceTree = "<group>"; };
 		07C9CC551893E715005C7DE2 /* FFLicense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicense.m; sourceTree = "<group>"; };
-		07C9CC581893EB62005C7DE2 /* FFLicenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicenceDetailViewController.h; sourceTree = "<group>"; };
-		07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicenceDetailViewController.m; sourceTree = "<group>"; };
+		07C9CC581893EB62005C7DE2 /* FFLicenseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicenseDetailViewController.h; sourceTree = "<group>"; };
+		07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicenseDetailViewController.m; sourceTree = "<group>"; };
 		07C9CC5C18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FullscreenConstraints.h"; sourceTree = "<group>"; };
 		07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FullscreenConstraints.m"; sourceTree = "<group>"; };
 		07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AnimatedArrayUpdate.h"; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 				07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */,
 				07C9CC4C1893E321005C7DE2 /* FFLicensesViewController.h */,
 				07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */,
-				07C9CC581893EB62005C7DE2 /* FFLicenceDetailViewController.h */,
-				07C9CC591893EB62005C7DE2 /* FFLicenceDetailViewController.m */,
+				07C9CC581893EB62005C7DE2 /* FFLicenseDetailViewController.h */,
+				07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */,
 				07C9CC541893E715005C7DE2 /* FFLicense.h */,
 				07C9CC551893E715005C7DE2 /* FFLicense.m */,
 			);
@@ -289,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C9CC5A1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */,
+				07C9CC5A1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */,
 				07C9CC6018940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
 				07C9CC561893E715005C7DE2 /* FFLicense.m in Sources */,
 				07C9CC271893E29C005C7DE2 /* FFAppDelegate.m in Sources */,
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C9CC5B1893EB62005C7DE2 /* FFLicenceDetailViewController.m in Sources */,
+				07C9CC5B1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */,
 				07C9CC4F1893E321005C7DE2 /* FFLicensesViewController.m in Sources */,
 				07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
 				07C9CC571893E715005C7DE2 /* FFLicense.m in Sources */,

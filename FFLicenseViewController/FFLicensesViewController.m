@@ -7,7 +7,7 @@
 
 #import "FFLicensesViewController.h"
 #import "UITableView+AnimatedArrayUpdate.h"
-#import "FFLicenceDetailViewController.h"
+#import "FFLicenseDetailViewController.h"
 
 @interface FFLicensesViewController ()
 
@@ -64,7 +64,7 @@ static NSString *FFLicenseCellIdentifier = @"LicenseCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FFLicense *license = self.licenses[indexPath.row];
-    FFLicenceDetailViewController *detailVC = [[FFLicenceDetailViewController alloc] init];
+    FFLicenseDetailViewController *detailVC = [[FFLicenseDetailViewController alloc] init];
     detailVC.license = license;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

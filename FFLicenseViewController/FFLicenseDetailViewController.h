@@ -1,5 +1,5 @@
 //
-//  FFLicenceDetailViewController.h
+//  FFLicenseDetailViewController.h
 //
 //  Created by Florian Friedrich on 25.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
@@ -18,7 +18,7 @@
 #import <UIKit/UIKit.h>
 #import "FFLicense.h"
 
-@interface FFLicenceDetailViewController : UIViewController
+@interface FFLicenseDetailViewController : UIViewController
 
 @property (nonatomic, strong) FFLicense *license;
 

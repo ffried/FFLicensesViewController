@@ -1,14 +1,14 @@
 //
-//  FFLicenceDetailViewController.m
+//  FFLicenseDetailViewController.m
 //
 //  Created by Florian Friedrich on 25.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-#import "FFLicenceDetailViewController.h"
+#import "FFLicenseDetailViewController.h"
 #import "NSLayoutConstraint+FullscreenConstraints.h"
 
-@interface FFLicenceDetailViewController ()
+@interface FFLicenseDetailViewController ()
 
 @property (nonatomic, strong) UITextView *licenseTextView;
 
@@ -17,7 +17,7 @@
 @end
 
 
-@implementation FFLicenceDetailViewController
+@implementation FFLicenseDetailViewController
 
 - (void)viewDidLoad
 {
