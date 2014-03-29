@@ -17,23 +17,25 @@
 
 #import "UITableView+AnimatedArrayUpdate.h"
 
-
 @implementation UITableView (AnimatedArrayUpdate)
 
-- (void)updateFromArray:(NSArray *)oldArray toArray:(NSArray *)newArray inSection:(NSUInteger)section animated:(BOOL)animated
+- (void)updateFromArray:(NSArray *)oldArray
+                toArray:(NSArray *)newArray
+              inSection:(NSUInteger)section
+               animated:(BOOL)animated
 {
     UITableViewRowAnimation animation = (animated) ? UITableViewRowAnimationAutomatic : UITableViewRowAnimationNone;
     
-    NSMutableArray *insertAndRemoveResult = [[NSMutableArray alloc] init];
-    [insertAndRemoveResult addObjectsFromArray:oldArray];
+    NSMutableArray *insertAndRemoveResult = [NSMutableArray arrayWithArray:oldArray];
     
     [self beginUpdates];
     
     /* remove cells */
-    NSMutableArray *toRemovePaths = [[NSMutableArray alloc] init];
+    NSMutableArray *toRemovePaths = [NSMutableArray array];
     for (id obj in oldArray) {
         if (![newArray containsObject:obj]) {
-            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:[oldArray indexOfObject:obj] inSection:section];
+            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:[oldArray indexOfObject:obj]
+                                                       inSection:section];
             [insertAndRemoveResult removeObject:obj];
             [toRemovePaths addObject:cellPath];
         }
@@ -59,8 +61,10 @@
     /* move cells */
     for (id obj in newArray) {
         if ([oldArray containsObject:obj]) {
-            NSIndexPath *newPath = [NSIndexPath indexPathForRow:[newArray indexOfObject:obj] inSection:section];
-            NSIndexPath *oldPath = [NSIndexPath indexPathForRow:[insertAndRemoveResult indexOfObject:obj] inSection:section];
+            NSIndexPath *newPath = [NSIndexPath indexPathForRow:[newArray indexOfObject:obj]
+                                                      inSection:section];
+            NSIndexPath *oldPath = [NSIndexPath indexPathForRow:[insertAndRemoveResult indexOfObject:obj]
+                                                      inSection:section];
             if (newPath.row != oldPath.row) {
                 [self moveRowAtIndexPath:oldPath toIndexPath:newPath];
             }

@@ -1,0 +1,3 @@
+[submodule "Submodules/NSLayoutConstraint+FullscreenConstraints"]
+	path = Submodules/NSLayoutConstraint+FullscreenConstraints
+	url = https://ffried@gist.github.com/8182494.git

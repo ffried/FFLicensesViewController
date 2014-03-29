@@ -15,10 +15,14 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-@import UIKit;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UITableView (AnimatedArrayUpdate)
 
-- (void)updateFromArray:(NSArray *)oldArray toArray:(NSArray *)newArray inSection:(NSUInteger)section animated:(BOOL)animated;
+- (void)updateFromArray:(NSArray *)oldArray
+                toArray:(NSArray *)newArray
+              inSection:(NSUInteger)section
+               animated:(BOOL)animated;
 
 @end

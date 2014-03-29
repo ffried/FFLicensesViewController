@@ -27,8 +27,6 @@
 		07C9CC571893E715005C7DE2 /* FFLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC551893E715005C7DE2 /* FFLicense.m */; };
 		07C9CC5A1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */; };
 		07C9CC5B1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */; };
-		07C9CC6018940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
-		07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */; };
 		07C9CC6218940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
 		07C9CC6318940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */; };
 		07C9CC6818942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6718942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt */; };
@@ -37,6 +35,7 @@
 		07C9CC6C18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6A18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf */; };
 		07C9CC6E18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */; };
 		07C9CC6F18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */; };
+		07E056AD18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E056AC18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,13 +74,13 @@
 		07C9CC551893E715005C7DE2 /* FFLicense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicense.m; sourceTree = "<group>"; };
 		07C9CC581893EB62005C7DE2 /* FFLicenseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFLicenseDetailViewController.h; sourceTree = "<group>"; };
 		07C9CC591893EB62005C7DE2 /* FFLicenseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLicenseDetailViewController.m; sourceTree = "<group>"; };
-		07C9CC5C18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FullscreenConstraints.h"; sourceTree = "<group>"; };
-		07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FullscreenConstraints.m"; sourceTree = "<group>"; };
 		07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AnimatedArrayUpdate.h"; sourceTree = "<group>"; };
 		07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AnimatedArrayUpdate.m"; sourceTree = "<group>"; };
 		07C9CC6718942348005C7DE2 /* UITableView+AnimatedArrayUpdate_License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UITableView+AnimatedArrayUpdate_License.txt"; sourceTree = "<group>"; };
 		07C9CC6A18942744005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "NSLayoutConstraint+FullscreenConstraints_License.rtf"; sourceTree = "<group>"; };
 		07C9CC6D18942BE2005C7DE2 /* NSLayoutConstraint+FullscreenConstraints_License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NSLayoutConstraint+FullscreenConstraints_License.txt"; sourceTree = "<group>"; };
+		07E056AB18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+FullscreenConstraints.h"; sourceTree = "<group>"; };
+		07E056AC18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+FullscreenConstraints.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +187,8 @@
 		07C9CC4B1893E2C1005C7DE2 /* FFLicenseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				07C9CC5C18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.h */,
-				07C9CC5D18940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m */,
-				07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */,
-				07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */,
+				07E056AE18E7265600026995 /* ThirdParty */,
+				07E056AF18E7266400026995 /* UITableView+AnimatedArrayUpdate */,
 				07C9CC4C1893E321005C7DE2 /* FFLicensesViewController.h */,
 				07C9CC4D1893E321005C7DE2 /* FFLicensesViewController.m */,
 				07C9CC581893EB62005C7DE2 /* FFLicenseDetailViewController.h */,
@@ -201,6 +198,33 @@
 			);
 			name = FFLicenseViewController;
 			path = ../FFLicenseViewController;
+			sourceTree = "<group>";
+		};
+		07E056AA18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				07E056AB18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.h */,
+				07E056AC18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.m */,
+			);
+			name = "NSLayoutConstraint+FullscreenConstraints";
+			path = "../Submodules/NSLayoutConstraint+FullscreenConstraints";
+			sourceTree = "<group>";
+		};
+		07E056AE18E7265600026995 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				07E056AA18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		07E056AF18E7266400026995 /* UITableView+AnimatedArrayUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				07C9CC5E18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.h */,
+				07C9CC5F18940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m */,
+			);
+			name = "UITableView+AnimatedArrayUpdate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,13 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C9CC5A1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */,
-				07C9CC6018940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
 				07C9CC561893E715005C7DE2 /* FFLicense.m in Sources */,
 				07C9CC271893E29C005C7DE2 /* FFAppDelegate.m in Sources */,
 				07C9CC231893E29C005C7DE2 /* main.m in Sources */,
 				07C9CC4E1893E321005C7DE2 /* FFLicensesViewController.m in Sources */,
 				07C9CC2D1893E29C005C7DE2 /* FFViewController.m in Sources */,
 				07C9CC6218940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */,
+				07E056AD18E7265100026995 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +348,6 @@
 			files = (
 				07C9CC5B1893EB62005C7DE2 /* FFLicenseDetailViewController.m in Sources */,
 				07C9CC4F1893E321005C7DE2 /* FFLicensesViewController.m in Sources */,
-				07C9CC6118940FC3005C7DE2 /* NSLayoutConstraint+FullscreenConstraints.m in Sources */,
 				07C9CC571893E715005C7DE2 /* FFLicense.m in Sources */,
 				07C9CC421893E29C005C7DE2 /* FFLicenseViewController_SampleTests.m in Sources */,
 				07C9CC6318940FC3005C7DE2 /* UITableView+AnimatedArrayUpdate.m in Sources */,

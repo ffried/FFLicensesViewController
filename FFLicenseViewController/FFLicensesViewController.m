@@ -77,10 +77,9 @@ static NSString *FFLicenseCellIdentifier = @"LicenseCell";
 - (void)setLicenses:(NSArray *)licenses
 {
     if (![licenses isEqual:_licenses]) {
-        if (_licenses) {
-            [self.tableView updateFromArray:_licenses toArray:licenses inSection:1 animated:YES];
-        }
+        NSArray *previousLicenses = _licenses ?: @[];
         _licenses = licenses;
+        [self.tableView updateFromArray:previousLicenses toArray:licenses inSection:1 animated:YES];
     }
 }
 

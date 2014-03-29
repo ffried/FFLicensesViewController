@@ -17,13 +17,40 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Represents a license.
+ */
 @interface FFLicense : NSObject
 
+/**
+ *  The title of the licensed object.
+ */
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSURL *licenseFilePath; // Either in bundle or elsewhere in app folder
-@property (nonatomic, strong, readonly) NSAttributedString *licenseContent; // on iOS 6 it will only be a normal string without attributes
+/**
+ *  The path of the license file.
+ *  Should be a local URL. Either in the app's bundle or documents folder.
+ */
+@property (nonatomic, strong) NSURL *licenseFilePath;
+/**
+ *  The string content.
+ *  If the licenseFilePath points to a Rich Text Format file this will be an attributed string on iOS 7+.
+ *  On iOS 6 and below this is always a normal NSString.
+ */
+@property (nonatomic, strong, readonly) NSAttributedString *licenseContent;
 
+/**
+ *  Convenience class method for creating new license instances.
+ *  @param title    The title of the license.
+ *  @param filePath The path to the license file.
+ *  @return A new instance of FFLicense with the title and licenseFilePath properties set.
+ */
 + (instancetype)licenseWithTitle:(NSString *)title filePath:(NSURL *)filePath;
+/**
+ *  Creates a new FFLicense instance with a title and filePath given.
+ *  @param title    The title of the license.
+ *  @param filePath The path to the license file.
+ *  @return A new instance of FFLicense with the title and licenseFilePath properties set.
+ */
 - (instancetype)initWithTitle:(NSString *)title filePath:(NSURL *)filePath;
 
 @end

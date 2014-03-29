@@ -7,6 +7,7 @@
 
 #import "FFLicenseDetailViewController.h"
 #import "NSLayoutConstraint+FullscreenConstraints.h"
+#import "FFLicense.h"
 
 @interface FFLicenseDetailViewController ()
 

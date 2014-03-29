@@ -16,10 +16,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FFLicense.h"
 
+@class FFLicense;
+/**
+ *  Shows the content of a licence file.
+ */
 @interface FFLicenseDetailViewController : UIViewController
 
+/**
+ *  The license to show contents for.
+ */
 @property (nonatomic, strong) FFLicense *license;
 
 @end

@@ -18,8 +18,14 @@
 #import <UIKit/UIKit.h>
 #import "FFLicense.h"
 
+/**
+ *  Displays licenses.
+ */
 @interface FFLicensesViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *licenses; // Must contain FFLicense objects
+/**
+ *  An array of FFLicense instances.
+ */
+@property (nonatomic, strong) NSArray *licenses;
 
 @end
