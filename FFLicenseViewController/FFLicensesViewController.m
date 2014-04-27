@@ -22,6 +22,8 @@ static NSString *FFLicenseCellIdentifier = @"LicenseCell";
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:FFLicenseCellIdentifier];
+
+    if (!_licenses) _licenses = @[];
     
     if (self.licenses) {
         [self.tableView reloadData];

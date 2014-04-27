@@ -29,7 +29,7 @@ extern FFLicense *FFLicenseInAppBundle(NSString *title, NSString *extension);
 /**
  *  Represents a license.
  */
-@interface FFLicense : NSObject
+@interface FFLicense : NSObject <NSCopying, NSSecureCoding>
 
 /**
  *  The title of the licensed object.

@@ -66,4 +66,46 @@ extern FFLicense *FFLicenseInAppBundle(NSString *title, NSString *extension) {
     }
 }
 
+#pragma mark - Equality
+- (NSUInteger)hash
+{
+    return [self.title hash] ^ [self.licenseFilePath hash];
+}
+
+- (BOOL)isEqual:(id)object
+{
+    if (!object) return NO;
+    
+    if (![object isKindOfClass:[self class]]) {
+        return NO;
+    }
+    
+    FFLicense *lObject = (FFLicense *)object;
+    return [lObject.title isEqualToString:self.title] && [lObject.licenseFilePath isEqual:self.licenseFilePath];
+}
+
+#pragma mark - NSCopying
+- (instancetype)copyWithZone:(NSZone *)zone
+{
+    NSString *title = [self.title copyWithZone:zone];
+    NSURL *licenseFilePath = [self.licenseFilePath copyWithZone:zone];
+    return [[self class] licenseWithTitle:title filePath:licenseFilePath];
+}
+
+#pragma mark - NSSecureCoding
++ (BOOL)supportsSecureCoding { return YES; }
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.title forKey:@"title"];
+    [aCoder encodeObject:self.licenseFilePath forKey:@"licenseFilePath"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    NSString *title = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"title"];
+    NSURL *licenseFilePath = [aDecoder decodeObjectOfClass:[NSURL class] forKey:@"licenseFilePath"];
+    return [self initWithTitle:title filePath:licenseFilePath];
+}
+
 @end
