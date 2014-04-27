@@ -17,6 +17,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class FFLicense;
+/**
+ *  Creates an FFLicense with a license file within the apps bundle ([NSBundle mainBundle]).
+ *  @param title     The title of the license as well as the license file.
+ *  @param extension The extension of the license file.
+ *  @return A FFLicense instance with the licenseFilePath set to the path of the file (title.extension) in the main bundle.
+ */
+extern FFLicense *FFLicenseInAppBundle(NSString *title, NSString *extension);
+
 /**
  *  Represents a license.
  */

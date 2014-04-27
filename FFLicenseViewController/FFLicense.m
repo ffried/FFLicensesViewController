@@ -7,9 +7,21 @@
 
 #import "FFLicense.h"
 
+extern FFLicense *FFLicenseInAppBundle(NSString *title, NSString *extension) {
+    return [FFLicense licenseWithTitle:title
+                              filePath:[[NSBundle mainBundle] URLForResource:title
+                                                               withExtension:extension]];
+}
+
 @implementation FFLicense
 @synthesize licenseContent = _licenseContent;
+
 #pragma mark - Initializer
++ (instancetype)licenseWithTitle:(NSString *)title filePath:(NSURL *)filePath
+{
+    return [[[self class] alloc] initWithTitle:title filePath:filePath];
+}
+
 - (instancetype)initWithTitle:(NSString *)title filePath:(NSURL *)filePath
 {
     self = [super init];
@@ -22,11 +34,6 @@
 
 - (instancetype)init { return [self initWithTitle:nil filePath:nil]; }
 
-+ (instancetype)licenseWithTitle:(NSString *)title filePath:(NSURL *)filePath
-{
-    return [[[self class] alloc] initWithTitle:title filePath:filePath];
-}
-
 #pragma mark - Properties
 - (NSAttributedString *)licenseContent
 {
@@ -34,9 +41,14 @@
         __autoreleasing NSError *error = nil;
         NSAttributedString *content;
         if ([NSAttributedString instancesRespondToSelector:@selector(initWithFileURL:options:documentAttributes:error:)]) {
-            content = [[NSAttributedString alloc] initWithFileURL:self.licenseFilePath options:nil documentAttributes:nil error:&error];
+            content = [[NSAttributedString alloc] initWithFileURL:self.licenseFilePath
+                                                          options:nil
+                                               documentAttributes:nil
+                                                            error:&error];
         } else {
-            content = [[NSAttributedString alloc] initWithString:[NSString stringWithContentsOfURL:self.licenseFilePath encoding:NSUTF8StringEncoding error:&error]];
+            content = [[NSAttributedString alloc] initWithString:[NSString stringWithContentsOfURL:self.licenseFilePath
+                                                                                          encoding:NSUTF8StringEncoding
+                                                                                             error:&error]];
         }
         if (error) {
             NSLog(@"FFLicense: An error occured while loading license contents from file: %@", error);
