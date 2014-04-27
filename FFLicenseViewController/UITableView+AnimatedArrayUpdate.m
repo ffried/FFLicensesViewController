@@ -19,6 +19,110 @@
 
 @implementation UITableView (AnimatedArrayUpdate)
 
+- (void)updateFromSectionsArray:(NSArray *)oldSections
+                toSectionsArray:(NSArray *)newSections
+                       animated:(BOOL)animated
+{
+    UITableViewRowAnimation animation = (animated) ? UITableViewRowAnimationAutomatic : UITableViewRowAnimationNone;
+    
+    /* If oldSections is empty or nil, we just insert the new sections */
+    if (![oldSections count]) {
+        NSMutableIndexSet *toAddSections = [NSMutableIndexSet indexSet];
+        for (id<UITableViewSectionObject> obj in newSections) {
+            NSUInteger idx = [newSections indexOfObject:obj];
+            [toAddSections addIndex:idx];
+        }
+        [self beginUpdates];
+        [self insertSections:[toAddSections copy] withRowAnimation:animation];
+        [self endUpdates];
+        return;
+    }
+    
+    NSMutableArray *insertAndRemoveResult = [NSMutableArray arrayWithArray:oldSections];
+    
+    [self beginUpdates];
+    
+    /* remove sections */
+    NSMutableIndexSet *toRemoveSections = [NSMutableIndexSet indexSet];
+    for (id<UITableViewSectionObject> obj in oldSections) {
+        if (![newSections containsObject:obj]) {
+            NSUInteger idx = [oldSections indexOfObject:obj];
+            [insertAndRemoveResult removeObject:obj];
+            [toRemoveSections addIndex:idx];
+        }
+    }
+    [self deleteSections:[toRemoveSections copy] withRowAnimation:animation];
+    
+    
+    /* add sections */
+    NSMutableIndexSet *toAddSections = [NSMutableIndexSet indexSet];
+    for (id<UITableViewSectionObject> obj in newSections) {
+        if (![oldSections containsObject:obj]) {
+            NSUInteger idx = [newSections indexOfObject:obj];
+            [insertAndRemoveResult insertObject:obj atIndex:idx];
+            [toAddSections addIndex:idx];
+        }
+    }
+    [self insertSections:[toAddSections copy] withRowAnimation:animation];
+    [self endUpdates];
+    
+    
+    [self beginUpdates];
+    /* move and update sections */
+    for (id<UITableViewSectionObject> obj in newSections) {
+        if ([oldSections containsObject:obj]) {
+            NSUInteger oldIndex = [insertAndRemoveResult indexOfObject:obj];
+            NSUInteger newIndex = [newSections indexOfObject:obj];
+            if (newIndex != oldIndex) {
+                [self moveSection:oldIndex toSection:newIndex];
+            }
+        }
+    }
+    [self endUpdates];
+    
+    
+    /* update existing sections */
+    for (id<UITableViewSectionObject> obj in newSections) {
+        if ([oldSections containsObject:obj]) {
+            NSUInteger section = [newSections indexOfObject:obj];
+            [self updateFromArray:[oldSections[section] rows] toArray:[obj rows] inSection:section animated:animated];
+        }
+    }
+}
+
+#pragma mark - Row updates
+- (void)insertAndDeleteRowsFromArray:(NSArray *)oldArray
+                             toArray:(NSArray *)newArray
+                              result:(NSMutableArray *)insertAndRemoveResult
+                           inSection:(NSUInteger)section
+                       withAnimation:(UITableViewRowAnimation)animation
+{
+    /* remove cells */
+    NSMutableArray *toRemovePaths = [NSMutableArray array];
+    for (id obj in oldArray) {
+        if (![newArray containsObject:obj]) {
+            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:[oldArray indexOfObject:obj]
+                                                       inSection:section];
+            [insertAndRemoveResult removeObject:obj];
+            [toRemovePaths addObject:cellPath];
+        }
+    }
+    [self deleteRowsAtIndexPaths:[toRemovePaths copy] withRowAnimation:animation];
+    
+    
+    /* add cells */
+    NSMutableArray *toAddPaths = [NSMutableArray array];
+    for (id obj in newArray) {
+        if (![oldArray containsObject:obj]) {
+            NSUInteger newIndex = [newArray indexOfObject:obj];
+            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:newIndex inSection:section];
+            [insertAndRemoveResult insertObject:obj atIndex:newIndex];
+            [toAddPaths addObject:cellPath];
+        }
+    }
+    [self insertRowsAtIndexPaths:[toAddPaths copy] withRowAnimation:animation];
+}
+
 - (void)updateFromArray:(NSArray *)oldArray
                 toArray:(NSArray *)newArray
               inSection:(NSUInteger)section
@@ -26,15 +130,16 @@
 {
     UITableViewRowAnimation animation = (animated) ? UITableViewRowAnimationAutomatic : UITableViewRowAnimationNone;
     
-    if (!oldArray.count) {
-        NSMutableArray *toAddPaths = [[NSMutableArray alloc] init];
+    /* If oldArray is empty or nil, we just insert the new rows */
+    if (![oldArray count]) {
+        NSMutableArray *toAddPaths = [NSMutableArray array];
         for (id obj in newArray) {
-            NSUInteger newIndex = [newArray indexOfObject:obj];
-            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:newIndex inSection:section];
+            NSUInteger idx = [newArray indexOfObject:obj];
+            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:idx inSection:section];
             [toAddPaths addObject:cellPath];
         }
         [self beginUpdates];
-        [self insertRowsAtIndexPaths:toAddPaths withRowAnimation:animation];
+        [self insertRowsAtIndexPaths:[toAddPaths copy] withRowAnimation:animation];
         [self endUpdates];
         return;
     }
@@ -53,11 +158,11 @@
             [toRemovePaths addObject:cellPath];
         }
     }
-    [self deleteRowsAtIndexPaths:toRemovePaths withRowAnimation:animation];
+    [self deleteRowsAtIndexPaths:[toRemovePaths copy] withRowAnimation:animation];
     
     
     /* add cells */
-    NSMutableArray *toAddPaths = [[NSMutableArray alloc] init];
+    NSMutableArray *toAddPaths = [NSMutableArray array];
     for (id obj in newArray) {
         if (![oldArray containsObject:obj]) {
             NSUInteger newIndex = [newArray indexOfObject:obj];
@@ -66,7 +171,7 @@
             [toAddPaths addObject:cellPath];
         }
     }
-    [self insertRowsAtIndexPaths:toAddPaths withRowAnimation:animation];
+    [self insertRowsAtIndexPaths:[toAddPaths copy] withRowAnimation:animation];
     [self endUpdates];
     
 

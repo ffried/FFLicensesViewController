@@ -9,25 +9,18 @@
 #import "UITableView+AnimatedArrayUpdate.h"
 #import "FFLicenseDetailViewController.h"
 
-@interface FFLicensesViewController ()
+static NSString *const FFLicenseCellIdentifier = @"FFLicenseCellIdentifier";
 
-@end
-
-static NSString *FFLicenseCellIdentifier = @"LicenseCell";
 @implementation FFLicensesViewController
 
-#pragma mark - View lifecycle
+#pragma mark - View Lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:FFLicenseCellIdentifier];
-
-    if (!_licenses) _licenses = @[];
     
-    if (self.licenses) {
-        [self.tableView reloadData];
-    }
+    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -41,7 +34,7 @@ static NSString *FFLicenseCellIdentifier = @"LicenseCell";
     }
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -66,7 +59,7 @@ static NSString *FFLicenseCellIdentifier = @"LicenseCell";
     return cell;
 }
 
-#pragma mark - Table view delegate
+#pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FFLicense *license = self.licenses[indexPath.row];
@@ -75,13 +68,15 @@ static NSString *FFLicenseCellIdentifier = @"LicenseCell";
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
-#pragma mark - Setter
+#pragma mark - Properties
 - (void)setLicenses:(NSArray *)licenses
 {
     if (![licenses isEqual:_licenses]) {
-        NSArray *previousLicenses = _licenses ?: @[];
+        NSArray *previousLicenses = _licenses;
         _licenses = licenses;
-        [self.tableView updateFromArray:previousLicenses toArray:licenses inSection:0 animated:YES];
+        if ([self isViewLoaded]) {
+            [self.tableView updateFromArray:previousLicenses toArray:_licenses inSection:0 animated:YES];
+        }
     }
 }
 

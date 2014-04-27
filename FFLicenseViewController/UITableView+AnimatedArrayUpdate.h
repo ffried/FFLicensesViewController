@@ -18,8 +18,32 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@protocol UITableViewSectionObject <NSObject>
+@property (nonatomic, strong) NSArray *rows;
+@end
+
 @interface UITableView (AnimatedArrayUpdate)
 
+/**
+ *  Updates the tableview's sections and their rows from an oldSectionsArray to a newSectionsArray animated or not.
+ *  The array arguments must each contain an object which conforms to the UITableViewSectionObject protocol.
+ *  The data source array has to be set to the new array before calling this method.
+ *  @param oldSections The currently shown sections.
+ *  @param newSections The new sections.
+ *  @param animated    Whether or not the update should be animated.
+ */
+- (void)updateFromSectionsArray:(NSArray *)oldSections
+                toSectionsArray:(NSArray *)newSections
+                       animated:(BOOL)animated;
+
+/**
+ *  Updates the tableview from an oldArray to a newArray in a given section animated or not.
+ *  The data source array has to be set to the new array before calling this method.
+ *  @param oldArray The currently displayed data source array.
+ *  @param newArray The new data source array.
+ *  @param section  The section to update.
+ *  @param animated Whether or not the update should be animated.
+ */
 - (void)updateFromArray:(NSArray *)oldArray
                 toArray:(NSArray *)newArray
               inSection:(NSUInteger)section
