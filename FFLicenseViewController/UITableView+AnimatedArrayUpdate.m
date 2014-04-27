@@ -26,6 +26,19 @@
 {
     UITableViewRowAnimation animation = (animated) ? UITableViewRowAnimationAutomatic : UITableViewRowAnimationNone;
     
+    if (!oldArray.count) {
+        NSMutableArray *toAddPaths = [[NSMutableArray alloc] init];
+        for (id obj in newArray) {
+            NSUInteger newIndex = [newArray indexOfObject:obj];
+            NSIndexPath *cellPath = [NSIndexPath indexPathForRow:newIndex inSection:section];
+            [toAddPaths addObject:cellPath];
+        }
+        [self beginUpdates];
+        [self insertRowsAtIndexPaths:toAddPaths withRowAnimation:animation];
+        [self endUpdates];
+        return;
+    }
+    
     NSMutableArray *insertAndRemoveResult = [NSMutableArray arrayWithArray:oldArray];
     
     [self beginUpdates];
