@@ -1,3 +1,6 @@
 [submodule "Submodules/NSLayoutConstraint+FullscreenConstraints"]
 	path = Submodules/NSLayoutConstraint+FullscreenConstraints
 	url = https://ffried@gist.github.com/8182494.git
+[submodule "Submodules/UITableView+AnimatedArrayUpdate"]
+	path = Submodules/UITableView+AnimatedArrayUpdate
+	url = https://gist.github.com/82b2091dd1386301e186.git
