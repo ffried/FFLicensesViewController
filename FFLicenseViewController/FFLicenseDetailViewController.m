@@ -24,9 +24,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.licenseTextView = [[UITextView alloc] init];
     self.licenseTextView.editable = NO;
     self.licenseTextView.dataDetectorTypes = UIDataDetectorTypeNone;
+    self.licenseTextView.alwaysBounceVertical = YES;
+    self.licenseTextView.backgroundColor = [UIColor clearColor];
     
     [NSLayoutConstraint setupSubview:self.licenseTextView fullscreenInSuperview:self.view];
     
